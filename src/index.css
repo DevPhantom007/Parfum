@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes blow {
+  0% {
+    transform: translateX(-100px) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(calc(100vw + 200px)) translateY(calc(100vh * var(--y, 0)));
+    opacity: 0;
+  }
+}
+
+.animate-blow {
+  animation: blow 0.8s linear forwards;
+}
